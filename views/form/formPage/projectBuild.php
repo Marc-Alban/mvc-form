@@ -1,0 +1,30 @@
+  <div class="container text-center situation_pro tab step"  id="2-content">
+    <div class="row" id="subStepProjectBuild">
+      <!-- trvaux -->
+      <div class="title">
+        <h2 class="fw-light">
+          Mon projet travaux
+        </h2>
+      </div>
+      <div class="step1_1A_project row">
+        <div class="col-md-12 col-sm-12">
+          <label for="worksType">Quel type de travaux souhaitez-vous réaliser ? <span class="worksType-validation validation-error"></label>
+          <div class="labelSelect">
+            <select id="worksType" class="selectListe" name="worksType">
+              <option value="">Sélectionner</option>
+              <option value="renovation">Rénovation</option>
+              <option value="decoration">Déco</option>
+              <option value="kitchen">Cuisine</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- fin travaux -->
+    <div class="btnForm">
+      <div>
+        <button type="button" class="btnPrev" >Précédent</button>
+        <button type="button" class="btnNext">Suivant</button>
+      </div>
+    </div>
+    </div>
+  </div>

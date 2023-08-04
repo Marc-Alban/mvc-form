@@ -1,0 +1,183 @@
+/* **************************************************************** */
+/* **************************Adherent************************** */
+/* **************************************************************** */
+body {
+    font-family: Arial, "Times New Roman", Times, serif;
+    background-color: #F6F6F6;
+    margin: 50px;
+}
+/* premiere partie (form) */
+.form-container {
+    border-radius: 10px;
+    box-shadow: 0 0 10px #58595B;
+    max-width: 40%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: #FFFFFF;
+}
+.form-container .icon {
+    position: absolute;
+    top: -28px;
+    left: -29px;
+    width: 60px;
+}
+.container_form{ 
+    width: 60%;
+    margin: 0 auto 20px;
+}
+.logo-epremio {
+    background: #59595b;
+    border-radius: 10px 10px 0 0;
+    text-align: right;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px 5px 5px 0;
+    font-weight: bold;
+    font-family: peugeot_normal, Arial, sans-serif;
+}
+.title {
+    text-transform: uppercase;
+    color: #59595b;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.subtitle {
+    text-align: left;
+    color: #59595b;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: underline #f59220;
+    margin: 0 0 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #59595B;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: arial;
+}
+button {
+    padding: 10px 15px;
+    background-color: rgb(245, 146, 32);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 15px;
+    width: 250px;
+    margin: auto;
+}
+.error {
+    color: #59595B;
+    margin-bottom: 20px;
+}
+.majusculeText{
+    text-transform: uppercase;
+}
+.e{
+    font-size: 1.3em;
+}
+/* deuxieme partie (barre_jaune)  */
+
+.barre_jaune {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    background: #f59220;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'muli', Arial, sans-serif;
+    margin: 50px auto 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.barre_jaune .icon {
+    position: absolute;
+    top: -10px;
+    left: -26px;
+    width: 80px;
+}
+
+.container_barre {
+    width: 100%;
+    line-height: 1px;
+}
+
+.barre_jaune p {
+    font-size: 0.9em !important;
+}
+
+
+/* mobile  */
+@media (max-width: 768px) {
+    body {
+        margin: 20px 0;
+    }
+    /* premiere partie  */
+    .form-container {
+        max-width: 90%;
+    }
+    button {
+        width: 200px;
+    }
+    /* deuxieme partie */
+    .barre_jaune {
+        width: 90%;
+        height: 200px;
+        margin: 30px auto 0;
+
+    }
+    .barre_jaune .icon {
+        position: absolute;
+        top: -29px;
+        left: -29px;
+        width: 60px;
+    }
+
+    .container_barre {
+        width: 100%;
+        line-height: 20px;
+    }
+
+    .barre_jaune p {
+        font-size: 0.9em !important;
+    }
+
+}
+
+/* **************************************************************** */
+/* **************************Adherent************************** */
+/* **************************************************************** */
+
+/* **************************************************************** */
+/* **************************Form Conso************************** */
+/* **************************************************************** */
+
+
+/* **************************************************************** */
+/* **************************Form Conso************************** */
+/* **************************************************************** */

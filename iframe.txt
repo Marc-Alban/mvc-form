@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ma page avec une iframe</title>
+</head>
+<body>
+  <iframe src="https://conso.finapole.fr/?p=responis"  id="ma-iframe"></iframe>
+  <script>
+    var iframe = document.getElementById("blockrandom-347");
+    function resizeIframe() {
+      iframe.style.height = window.innerHeight + 'px';
+      iframe.style.width = window.innerWidth + 'px';
+    }
+    window.onresize = resizeIframe;
+    resizeIframe();
+  </script>
+</body>
+</html>

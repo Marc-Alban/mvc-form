@@ -1,0 +1,944 @@
+/**
+*   -----------------------------------
+*   Responsis theme
+*   css -> global
+*   color title: #083ea7
+*   color: #6fc9ff
+*   background: #f7f8f8
+*   div section: #fff
+*   progress bar: #10e5d4
+*   @author Millet
+*   -----------------------------------
+**/
+:root {
+  --title-color: #083ea7;
+  --p-color: #6fc9ff;
+  --main-bg-color: #fff;
+  --section-color: #fff;
+  --progress-bar-color: #10e5d4;
+  --border-box-color: #b4b8d3;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, serif;
+  font-size: 1em;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--p-color);
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.title::after {
+  content: '_';
+  color: #6fc9ff;
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 0;
+  position: relative;
+  top: -0.4em;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hidden {
+  display: none;
+}
+
+
+.progress-bar {
+  background-color: var(--progress-bar-color);
+}
+
+.situation_pro {
+  background-color: var(--section-color);
+  width: 77%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid var(--border-box-color) !important;
+  border-radius: 4px;
+  box-shadow: 1px 1px 14px var(--border-box-color);
+  padding: 15px;
+}
+
+
+.step1_1_type input[type="radio"],
+.step1_1A_project input[type="radio"] {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.profession
+{
+  width: 50% !important;
+}
+
+.professionCo
+{
+  width: 60% !important;
+}
+
+/* text */
+.textInput {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.textInput label::before {
+  content: "•";
+  color: #6fc9ff;
+  margin-right: 7px;
+}
+
+.textInput input {
+  width: 35%;
+  height: 100%;
+  border: 1px solid #083ea7;
+  border-radius: 4px;
+  padding: 5px;
+  padding-right: 5px;
+  text-align: center;
+  color: #083ea7;
+}
+
+.textInput .help-block {
+  position: absolute;
+  right: 8px;
+  color: #083ea7;
+  font-weight: bold;
+}
+
+.textInput:hover+.helpConso {
+  display: block;
+  font-size: 0.8em !important;
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+/* amount */
+
+.amountInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 200px;
+}
+
+.amountInput input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #083ea7;
+  border-radius: 4px;
+  padding: 5px;
+  padding-right: 5px;
+  text-align: center;
+  color: #083ea7;
+}
+
+.amountInput .help-block {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  color: #083ea7;
+  font-weight: bold;
+}
+
+.amountInput:hover+.helpConso {
+  display: block;
+  font-size: 0.8em !important;
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+
+.helpConso {
+  display: none;
+}
+
+
+
+.yearInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 200px;
+}
+
+.yearInput input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #083ea7;
+  border-radius: 4px;
+  padding: 5px;
+  padding-right: 5px;
+  text-align: center;
+  color: #083ea7;
+}
+
+.yearInput .help-block {
+  position: absolute;
+  right: 10px;
+  color: #083ea7;
+  top: 4px;
+  font-weight: bold;
+}
+
+.step1_1A_project select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+  width: 399px;
+  height: 36px;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px #999;
+  background: #fff;
+  border: 1px solid #000;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  color: #083ea7;
+}
+
+.dateLabel {
+  color: #000;
+  margin: 20px;
+  width: 100%;
+}
+
+.labelSelect {
+  display: block !important;
+  position: relative;
+}
+
+.labelSelect:after {
+  content: ">";
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 5px;
+  bottom: 6px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.labelSelect:before {
+  content: "";
+  right: 0px;
+  top: 0;
+  width: 20px;
+  height: 35px;
+  background: #6fc9ff;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: 1;
+  float: right;
+  border: 1px solid #000;
+  border-radius: 0 3px 3px 0;
+}
+
+.step1_1A_project label {
+  color: #000;
+  margin: 20px;
+}
+
+.step1_1A_project div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.step1_1A_project #dateSelected {
+  display: flex;
+  justify-content: center !important;
+}
+
+#auto+label,
+#renovationWork+label,
+#personnalLoan+label,
+#revolvingCredit+label
+{
+  width: 70%;
+  min-width: 120px;
+  display: inline-block;
+  background: #fff;
+  margin: 10px 1.5%;
+  padding: 15px;
+  border-radius: 4px;
+  color: #68c4fc;
+  font-weight: bold;
+  border: 2px solid #68c4fc !important;
+  box-shadow: 1px 1px 5px var(--border-box-color);
+  border-radius: 70px;
+  position: relative;
+}
+
+
+.iconArrow::after {
+  content: ">";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 0px solid #68c4fc;
+  position: absolute;
+  right: 30px;
+  bottom: 31px !important;
+  font-size: 1.5em;
+}
+
+#auto+label:hover,
+#renovationWork+label:hover,
+#personnalLoan+label:hover,
+#revolvingCredit+label:hover
+{
+  background: #68c4fc;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+#category {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #fd7e7e;
+  border-color: #730606;
+}
+
+.errors {
+  background-color: #fd7e7e;
+  border-color: #730606;
+}
+
+.errors li {
+  color: red;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: block;
+  margin: 20px auto;
+}
+
+button {
+  background: none;
+  color: var(--p-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prev {
+  background-color: var(--main-bg-color);
+}
+
+.btnForm {
+  margin-top: 20px;
+}
+
+.btnForm div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btnPrev::before {
+  content: "<";
+  color: #000;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btnPrev {
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.btnNext,
+.btnNextFirst,
+.btnPrevFirst {
+  background-color: #17ead9;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px var(--border-box-color);
+}
+
+.btnNext::after,
+.btnNextFirst::after{
+  content: ">";
+  color: #fff;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btnPrevFirst::before {
+  content: "<";
+  color: #fff;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* #nextFirst,
+#btnNext {
+  display: flex !important;
+  justify-content: end !important;
+} */
+
+#divBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.btnRadioStart{
+  margin: 10px auto;
+}
+
+#submit-button{
+  background-color: #17ead9 !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  font-size: 17px !important;
+  font-family: Arial, sans-serif !important;
+  cursor: pointer !important;
+  border-radius: 10px !important;
+  box-shadow: 1px 1px 5px var(--border-box-color) !important;
+}
+
+/* Date picker */
+
+.dateInput .labelSelect {
+  display: block !important;
+  position: relative;
+}
+
+.dateInput {
+  justify-content: center !important;
+}
+
+.dateInput .labelSelect:after {
+  content: ">";
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 5px;
+  bottom: 6px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.dateInput .labelSelect:before {
+  content: "";
+  right: 0px;
+  top: 0;
+  width: 20px;
+  height: 35px;
+  background: #6fc9ff;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  z-index: 1;
+  float: right;
+  border: 1px solid #000;
+  border-radius: 0 3px 3px 0;
+}
+
+/* SELECT - Disabled */
+.dateInput .labelSelect select:disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+
+/* DEMO - Styles */
+.dateInput {
+  flex-direction: row !important;
+  width: 100%;
+}
+
+.dateInput .labelSelect {
+  margin: 10px;
+}
+
+.step1_1A_project .dateInput .labelSelect select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+  width: 107px;
+  height: 36.5px;
+  padding: 0 0 0 10px;
+    border-radius: 4px;
+  box-shadow: 2px 2px 8px #999;
+  background: #fff;
+  border: 1px solid #000;
+  outline: none;
+  display: inline-block;
+  text-align: left;
+  color: #083ea7;
+}
+
+/* age enfants */
+
+.numberstyle-qty {
+  position: relative;
+  background-color: #6FC9FF;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(116, 116, 116, 0.25);
+  border-radius: 40px;
+  flex-direction: row !important;
+  padding: 10px;
+}
+
+.numberstyle-qty input,
+.numberstyle-qty .qty-btn {
+  position: relative;
+  display: block;
+  float: left;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  text-align: center;
+  line-height: 40px;
+  outline: 0;
+  box-shadow: 0px;
+  width: 30px;
+}
+
+.numberstyle-qty .qty-btn {
+  width: 49px;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 250ms ease;
+  color: #083ea7;
+  background: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.numberstyle-qty .qty-btn.disabled {
+  cursor: default;
+  color: rgba(116, 116, 116, 0.5);
+}
+
+.numberstyle-qty input {
+  width: 50px;
+  border-left: 0;
+  border-right: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1;
+  background: #6fc9ff;
+}
+
+.numberstyle-qty input:focus {
+  outline: 0;
+  box-shadow: 0px;
+}
+
+.numberstyle-qty input[type=number]::-webkit-inner-spin-button,
+.numberstyle-qty input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberstyle-qty input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+#city-list li,
+#city-list-co li,
+#resultsList li {
+  cursor: pointer;
+}
+
+
+#city-list li:hover,
+#city-list-co li:hover,
+#resultsList li:hover {
+  background: #6fc9ff;
+  color: #fff;
+}
+
+
+/*
+*  CSS - MODAL
+*/
+/************************/
+/* #myModal {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.modal-content {
+  background: #6fc6fc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 200px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 50% 50%;
+  padding: 5px;
+} */
+
+/************************/
+
+
+@-webkit-keyframes reveal {
+
+  0%,
+  90% {
+    bottom: -30px;
+  }
+
+  100% {
+    bottom: 15px;
+  }
+}
+
+@keyframes reveal {
+
+  0%,
+  90% {
+    bottom: -30px;
+  }
+
+  100% {
+    bottom: 15px;
+  }
+}
+
+/* age enfants */
+/* hide element */
+.hide {
+  display: none !important;
+}
+
+/* hide element */
+
+
+.revenu {
+  display: flex !important;
+  /* flex-direction: row !important; */
+  width: 60%;
+  margin: auto;
+}
+
+.revenu label::before {
+  content: "•";
+  color: #6fc9ff;
+  margin-right: 7px;
+}
+
+.revenu label {
+  margin: 20px 10px 20px 0px !important;
+}
+
+#civility_gender,
+#coBorrowerCivility_gender,
+#civility_nationality {
+  width: 203px;
+}
+
+.alignRow {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+
+.alignLeft {
+  width: 80% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: start !important;
+  align-items: center !important;
+  align-content: center !important;
+  margin: 20px auto 20px auto;
+}
+
+.alignRow .textInput {
+  width: 50% !important;
+  margin: 0 !important;
+}
+
+.blockDateBirthDay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+.listCountry {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 45%;
+  justify-content: center !important;
+}
+
+.listCountry select {
+  width: 100% !important;
+}
+
+.textInput #profession,
+.textInput #coBorrowerProfession {
+  width: 200px;
+}
+.etatCivil .textInput input,
+.etatCivilCo .textInput input{
+  width: 80% !important;
+}
+.etatCivil .textInput,
+.etatCivilCo .textInput{
+  width: 200px !important;
+  position: relative !important;
+}
+
+.cityList {
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #000;
+  list-style: none;
+  text-align: left;
+  position: absolute;
+  top: 72px;
+  left: 20px;
+}
+
+
+.civilite,
+.civiliteCo {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  justify-content: start !important;
+  width: 165px;
+}
+
+.civilite select,
+.civiliteCo select {
+  justify-content: start !important;
+  width: 146px !important;
+}
+.civilite label,
+.civiliteCo label {
+  justify-content: start !important;
+}
+
+
+
+.checkboxInput {
+  text-align: justify;
+  display: inline-block !important;
+  width: 80% !important;
+  margin: 20px auto;
+  text-align: left;
+}
+
+
+.checkboxInput input{
+  float: left;
+  margin-right: 5px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .situation_pro,
+  #auto+label,
+  #renovationWork+label,
+  #personnalLoan+label,
+  #revolvingCredit+label,
+  .step1_1A_project select,
+  .labelSelect,
+  .amountInput,
+  .yearInput,
+  .etatCivil .textInput input,
+  .etatCivilCo .textInput input,
+  .textInput #profession,
+  .textInput #coBorrowerProfession .textInput input,
+  .alignLeft,
+  .revenu,
+  .profession,
+  .professionCo,
+  .textInput input,
+  .listCountry select,
+  .listCountry {
+    width: 100% !important;
+  }
+
+  .step1_1A_project .dateInput {
+    width: 100%;
+    height: 36.5px;
+    display: flex;
+    justify-content: center !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+  }
+  .step1_1A_project .dateInput select {
+    width: 100% !important;
+  }
+  
+.dateInput .labelSelect::after {
+  content: ">";
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 4px;
+  bottom: -13px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+
+
+  .iconArrow::after {
+    bottom: 30px;
+  }
+
+  .revenu {
+    flex-direction: column !important;
+  }
+
+  .step1_1A_project div {
+    align-items: inherit;
+  }
+
+  .step1_1A_project label,
+  .dateLabel {
+    width: 100% !important;
+    margin: 20px auto;
+  }
+
+   .numberstyle-qty {
+    margin: auto !important;
+  }
+
+  .textInput {
+    flex-direction: column !important;
+  }
+
+  .alignRow .textInput {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .civilite,
+  .civiliteCo {
+    width: 160px !important;
+  }
+}
