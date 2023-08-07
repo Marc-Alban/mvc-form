@@ -6,6 +6,8 @@ use App\Service\LeadService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 
 class LeadController extends AbstractController
 {
@@ -16,6 +18,9 @@ class LeadController extends AbstractController
         $this->leadService = $leadService;
     }
 
+    /**
+     * @Route("/conso", name="lead_index")
+     */
     public function index(Request $request): Response
     {
         if ($request->isMethod('POST')) {

@@ -1,8 +1,5 @@
-<?php
-$url = $_SERVER['REQUEST_URI'];
-$urlExplode = explode('/', $url);
-$dataUrl = $urlExplode[1];
-?>
+{% extends 'base.html.twig' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 
@@ -41,3 +38,4 @@ $dataUrl = $urlExplode[1];
 </body>
 
 </html>
+{% endblock %}

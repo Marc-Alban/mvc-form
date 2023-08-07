@@ -36,7 +36,7 @@ flex-wrap: wrap;
     width: 50%;
     height: 100%;
     max-height: 700px; /* Limit the height of the background image */
-    background-image: url('visuel-mail-dtravaux.png');
+    background-image: url('../../public/img/mailDtravaux/visuel-mail-dtravaux.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;

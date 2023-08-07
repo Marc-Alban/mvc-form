@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Demande de crédit | Solutis</title>
-  <!-- Style Css -->
-  {% if code_origine is defined and code_origine in ['conso', 'localhost', 'responis', 'dtravauxForm'] %}
-    {{ encore_entry_link_tags(code_origine) }}
-  {% else %}
-    {{ encore_entry_link_tags('default') }}
-  {% endif %}
-  {{ encore_entry_link_tags('font-awesome') }}
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Demande de crédit | Solutis{% endblock %}</title>
+    <!-- Style Css -->
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }} <!-- Importe le CSS regroupé par app.js -->
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-  <!-- Form conso début -->
-  <main>
-    {% if errors is defined and errors|length > 0 %}
-      <ul class="errors">
-        {% for error in errors %}
-          <li>{{ error }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-    {% block content %}{% endblock %}
-    <div class="links-container">
-      <a href="https://www.solutis.fr/formulaire/mentions-legales.html" class="gray-link" target="_blank">Mentions légales</a>
-      <span class="separator"></span>
-      <a href="https://www.solutis.fr/formulaire/politique-confidentialite.html" class="gray-link" target="_blank">Politique de confidentialité</a>
-      <span class="separator"></span>
-      <a href="{{ asset('folder/CGU.docx') }}" class="gray-link">CGU</a>
-    </div>
-  </main>
-  <!-- Script Js -->
-  {{ encore_entry_script_tags('jquery') }}
-  {{ encore_entry_script_tags('jquery-easing') }}
-  {{ encore_entry_script_tags('check') }}
-  {{ encore_entry_script_tags('btnChild') }}
-  {{ encore_entry_script_tags('date') }}
-  {{ encore_entry_script_tags('apiGeo') }}
-  {{ encore_entry_script_tags('script') }}
+    <!-- Form conso début -->
+    <main>
+        {% block errors %}
+            {% if errors is defined and errors|length > 0 %}
+                <ul class="errors">
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endblock %}
+        {% block content %}{% endblock %}
+        <div class="links-container">
+            <a href="https://www.solutis.fr/formulaire/mentions-legales.html" class="gray-link" target="_blank">Mentions légales</a>
+            <span class="separator"></span>
+            <a href="https://www.solutis.fr/formulaire/politique-confidentialite.html" class="gray-link" target="_blank">Politique de confidentialité</a>
+            <span class="separator"></span>
+            <a href="{{ asset('folder/CGU.docx') }}" class="gray-link">CGU</a>
+        </div>
+    </main>
+    <!-- Script Js -->
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }} <!-- Importe le JS regroupé par app.js -->
+    {% endblock %}
 </body>
 </html>

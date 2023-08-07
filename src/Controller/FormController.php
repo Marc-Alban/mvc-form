@@ -2,8 +2,10 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Form\FormFactoryInterface; 
 use App\Form\ProjectType;
 use App\Form\ProjectCarType;
 use App\Form\ProjectBuildType;
@@ -23,39 +25,51 @@ use App\Form\ContactDetailsType;
 
 class FormController extends AbstractController
 {
+    private $formFactory;
+
+    // Ajoutez le constructeur avec le service FormFactoryInterface en tant qu'argument
+    public function __construct(FormFactoryInterface $formFactory)
+    {
+        $this->formFactory = $formFactory;
+    }
+
     private $steps = [
-        'step1' => ProjectType::class,
-        'step2' => ProjectCarType::class,
-        'step3' => ProjectBuildType::class,
-        'step4' => ProjectOffersType::class,
-        'step5' => CreditType::class,
-        'step6' => SituationType::class,
-        'step7' => RevenueType::class,
-        'step8' => OtherRevenuType::class,
-        'step9' => ChargeType::class,
-        'step10' => SituationProfessionalType::class,
-        'step11' => SituationProfessionalCoType::class,
-        'step12' => SituationInheritanceType::class,
-        'step13' => BankType::class,
-        'step14' => MaritalStatusType::class,
-        'step15' => MaritalStatusCoType::class,
-        'step16' => ContactDetailsType::class,
+        'project' => ProjectType::class,
+        'projectCar' => ProjectCarType::class,
+        'projectBuild' => ProjectBuildType::class,
+        'projectOffers' => ProjectOffersType::class,
+        'credit' => CreditType::class,
+        'situation' => SituationType::class,
+        'revenue' => RevenueType::class,
+        'otherRevenu' => OtherRevenuType::class,
+        'charge' => ChargeType::class,
+        'situationProfessional' => SituationProfessionalType::class,
+        'situationProfessionalCo' => SituationProfessionalCoType::class,
+        'situationInheritance' => SituationInheritanceType::class,
+        'bank' => BankType::class,
+        'maritalStatus' => MaritalStatusType::class,
+        'maritalStatusCo' => MaritalStatusCoType::class,
+        'contactDetails' => ContactDetailsType::class,
     ];
 
+   /**
+     * @Route("/form/{step}", name="form_step")
+     */
     public function step($step, Request $request, SessionInterface $session)
     {
+        // dd($step);
         if (!isset($this->steps[$step])) {
             throw $this->createNotFoundException('Étape non trouvée');
         }
 
         $formClass = $this->steps[$step];
-        $form = $this->createForm($formClass::class);
+        $form = $this->formFactory->create($formClass);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $session->set($step . '_data', $form->getData());
             $nextStep = $this->getNextStep($step);
-            return $this->redirectToRoute($nextStep);
+            return $this->redirectToRoute('form_step', ['step' => $nextStep]);
         }
 
         return $this->render('form/' . $step . '.html.twig', [

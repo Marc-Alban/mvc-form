@@ -53,9 +53,6 @@ Encore
         config.corejs = '3.23';
     })
 
-    // enables Sass/SCSS support
-    //.enableSassLoader()
-
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 
@@ -66,8 +63,11 @@ Encore
     // requires WebpackEncoreBundle 1.4 or higher
     //.enableIntegrityHashes(Encore.isProduction())
 
-    // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+   // uncomment if you're having problems with a jQuery plugin
+   .autoProvidejQuery()
+
+   // enables Bootstrap 4+ support
+   .enableSassLoader()
 ;
 
 module.exports = Encore.getWebpackConfig();
