@@ -13,384 +13,384 @@ class Lead
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Origine - L'origine du lead.
      */
     private $Origine;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $CodeOrigine - Le code d'origine du lead.
      */
     private $CodeOrigine;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Adresse_Ip - L'adresse IP associée au lead.
      */
     private $Adresse_Ip;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateProprietaire - La date de propriété du lead.
      */
     private $DateProprietaire;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $TypeForm - Le type de formulaire associé au lead.
      */
     private $TypeForm;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Provenance - La provenance du lead.
      */
     private $Provenance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $TypeProjet - Le type de projet du lead.
      */
     private $TypeProjet;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $NatureProjet - La nature du projet du lead.
      */
     private $NatureProjet;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Assurance - L'assurance associée au lead.
      */
     private $Assurance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Csp - La catégorie socio-professionnelle du lead.
      */
     private $Csp;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $CspCo - La catégorie socio-professionnelle du co-emprunteur (si applicable).
      */
     private $CspCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Civilite - La civilité du lead.
      */
     private $Civilite;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Nom - Le nom du lead.
      */
     private $Nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Prenom - Le prénom du lead.
      */
     private $Prenom;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateNaissance - La date de naissance du lead.
      */
     private $DateNaissance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $LieuNaissance - Le lieu de naissance du lead.
      */
     private $LieuNaissance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $CodePostal - Le code postal de l'adresse du lead.
      */
     private $CodePostal;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Ville - La ville de l'adresse du lead.
      */
     private $Ville;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Adresse1 - La première ligne de l'adresse du lead.
      */
     private $Adresse1;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Telephone - Le numéro de téléphone du lead.
      */
     private $Telephone;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Portable - Le numéro de portable du lead.
      */
     private $Portable;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Email - L'adresse email du lead.
      */
     private $Email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $CiviliteCo - La civilité du co-emprunteur (si applicable).
      */
     private $CiviliteCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $NomCo - Le nom du co-emprunteur (si applicable).
      */
     private $NomCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $PrenomCo - Le prénom du co-emprunteur (si applicable).
      */
     private $PrenomCo;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateNaissanceCo - La date de naissance du co-emprunteur (si applicable).
      */
     private $DateNaissanceCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $LieuNaissanceCo - Le lieu de naissance du co-emprunteur (si applicable).
      */
     private $LieuNaissanceCo;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateSituationFamiliale - La date de situation familiale du lead.
      */
     private $DateSituationFamiliale;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $SituationFamiliale - La situation familiale du lead.
      */
     private $SituationFamiliale;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $NbEnfant - Le nombre d'enfants du lead.
      */
     private $NbEnfant;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Profession - La profession du lead.
      */
     private $Profession;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $TypeContrat - Le type de contrat du lead.
      */
     private $TypeContrat;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $ProfessionCo - La profession du co-emprunteur (si applicable).
      */
     private $ProfessionCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $TypeContratCo - Le type de contrat du co-emprunteur (si applicable).
      */
     private $TypeContratCo;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DebutActivite - La date de début d'activité du lead.
      */
     private $DebutActivite;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DebutActiviteCo - La date de début d'activité du co-emprunteur (si applicable).
      */
     private $DebutActiviteCo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $Nationalite - La nationalité du lead.
      */
     private $Nationalite;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $NationaliteCo - La nationalité du co-emprunteur (si applicable).
      */
     private $NationaliteCo;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $Revenus - Le montant des revenus du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $Revenus - Le montant des revenus du lead.
      */
     private $Revenus;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $RevenusCo - Le montant des revenus du co-emprunteur (si applicable).
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $RevenusCo - Le montant des revenus du co-emprunteur (si applicable).
      */
     private $RevenusCo;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $Loyer - Le montant du loyer du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $Loyer - Le montant du loyer du lead.
      */
     private $Loyer;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $LoyerCharges - Le montant du loyer avec charges du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $LoyerCharges - Le montant du loyer avec charges du lead.
      */
     private $LoyerCharges;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $MontantProjet - Le montant du projet du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $MontantProjet - Le montant du projet du lead.
      */
     private $MontantProjet;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $DureeRemboursementSouhaitee - La durée de remboursement souhaitée par le lead (en mois).
      */
     private $DureeRemboursementSouhaitee;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateObtentionFonds - La date d'obtention des fonds par le lead.
      */
     private $DateObtentionFonds;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $NiveauConnaissanceCredit - Le niveau de connaissance du crédit du lead.
      */
     private $NiveauConnaissanceCredit;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $NomBanque - Le nom de la banque du lead.
      */
     private $NomBanque;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $CBBanque - Le code banque de la banque du lead.
      */
     private $CBBanque;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $AnneeBanque - L'année de la banque du lead.
      */
     private $AnneeBanque;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $TypeVehicule - Le type de véhicule du lead.
      */
     private $TypeVehicule;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $EtatVehicule - L'état du véhicule du lead.
      */
     private $EtatVehicule;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", nullable="true", length=255)
      * @var string $ModeleVehicule - Le modèle du véhicule du lead.
      */
     private $ModeleVehicule;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $MensualiteImmo - La mensualité immobilière du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $MensualiteImmo - La mensualité immobilière du lead.
      */
     private $MensualiteImmo;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $MensualiteConso - La mensualité de consommation du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $MensualiteConso - La mensualité de consommation du lead.
      */
     private $MensualiteConso;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $AutresRevenus - Les autres revenus du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $AutresRevenus - Les autres revenus du lead.
      */
     private $AutresRevenus;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $AllocationsFamiliales - Les allocations familiales du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $AllocationsFamiliales - Les allocations familiales du lead.
      */
     private $AllocationsFamiliales;
 
     /**
-     * @ORM\Column(type="float")
-     * @var float $AllocationsLogement - Les allocations logement du lead.
+     * @ORM\Column(type="float",nullable="true")
+      * @var float $AllocationsLogement - Les allocations logement du lead.
      */
     private $AllocationsLogement;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable="true",)
      * @var bool $coEmprunteur - Indique si le lead a un co-emprunteur (true) ou non (false).
      */
     private $coEmprunteur;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable="true",)
      * @var bool $foyer - Indique si le lead fait partie d'un foyer (true) ou non (false).
      */
     private $foyer;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $NbImmo - Le nombre de biens immobiliers du lead.
      */
     private $NbImmo;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $NbConso - Le nombre de crédits à la consommation du lead.
      */
     private $NbConso;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable="true",)
      * @var int $IdContactClient - L'identifiant du contact client associé au lead.
      */
     private $IdContactClient;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime nullable="true",")
      * @var \DateTime $DateContact - La date de contact du lead.
      */
     private $DateContact;
